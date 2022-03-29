@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "polarsbear"
-version = "0.0.0"
+version = "0.0.1"
 description = "Superset package for Python Polars."
 authors = ["Chris Pryer"]
 license = "MIT"
