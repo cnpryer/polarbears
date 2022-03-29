@@ -14,6 +14,9 @@ jobs:
         python-version: [3.9, "3.10"]
 
     steps:
+      - name: Checkout repo.
+        uses: actions/checkout@v2
+
       - name: Install and configure Poetry
         uses: snok/install-poetry@v1
         with:
@@ -30,7 +33,8 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
       - name: Install dependencies
-        run: poetry install -E cli --no-interaction --no-root
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install --no-interaction --no-root
 
       - name: Install library
         run: poetry install --no-interaction
