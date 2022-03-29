@@ -44,5 +44,8 @@ jobs:
       - name: Install library
         run: poetry install --no-interaction
 
+      - name: Run lint
+        run: poetry run flake8 --exclude .venv
+
       - name: Run tests
         run: poetry run pytest

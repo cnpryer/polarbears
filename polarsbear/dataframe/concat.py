@@ -1,8 +1,6 @@
-import polars as pl
+from typing import List
 
 from polarsbear.dataframe.dataframe import DataFrame
-
-from typing import List
 
 
 def concat(dataframes: List[DataFrame]) -> DataFrame:

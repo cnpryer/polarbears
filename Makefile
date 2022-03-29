@@ -13,4 +13,8 @@ test:
 	poetry run pytest
 
 fmt:
-	black polarsbear tests
+	.venv/bin/black polarsbear tests
+	.venv/bin/isort polarsbear tests
+
+lint:
+	.venv/bin/flake8 polarsbear tests

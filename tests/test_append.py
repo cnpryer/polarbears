@@ -1,6 +1,6 @@
 import polars as pl
+
 import polarsbear as pb
-import numpy as np
 
 
 def test_concat() -> None:
