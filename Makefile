@@ -10,11 +10,11 @@ venv:
 	@poetry install
 
 test:
-	poetry run pytest
+	@poetry run pytest
 
 fmt:
-	.venv/bin/black polarsbear tests
-	.venv/bin/isort polarsbear tests
+	@.venv/bin/black . --exclude .venv
+	@.venv/bin/isort . --skip .venv
 
 lint:
-	.venv/bin/flake8 polarsbear tests
+	@.venv/bin/flake8 . --exclude .venv
