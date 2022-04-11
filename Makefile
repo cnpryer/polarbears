@@ -18,3 +18,7 @@ fmt:
 
 lint:
 	@.venv/bin/flake8 . --exclude .venv
+
+publish:
+	@poetry build
+	@poetry publish

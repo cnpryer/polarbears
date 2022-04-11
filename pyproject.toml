@@ -1,14 +1,13 @@
 [tool.poetry]
-name = "polarsbear"
-version = "0.0.1"
-description = "Superset package for Python Polars."
+name = "polarbears"
+version = "0.0.0"
+description = ""
 authors = ["Chris Pryer"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 polars = "^0.13.16"
-numpy = "^1.22.3"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"

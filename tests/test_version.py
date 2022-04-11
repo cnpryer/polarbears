@@ -1,4 +1,4 @@
-from polarsbear import __version__
+from polarbears import __version__
 
 
 def test_version() -> None:
